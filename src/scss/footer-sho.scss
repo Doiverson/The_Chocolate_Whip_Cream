@@ -88,7 +88,7 @@ footer.global{
         #newsletter-join-btn{
             position: absolute;
             right:$pad/2;
-            top:50%;
+            top:33%;
             cursor: pointer;
             transform: translateY(-50%);
             color: white;
@@ -258,8 +258,8 @@ footer.global{
                         color: #888888;
                     }
                     &.icon{
-                        font-size: 1.5rem;
-                        margin-right: $pad/2;
+                        font-size: 2.5rem;
+                        margin-right: 15px;
                     }
                 }
 
@@ -277,7 +277,7 @@ footer.global{
                     }
                     a{
                         &.icon{
-                            font-size: 1.5rem;
+                            font-size: 2.5rem;
                             margin: 0 $pad/4;
                         }
                     }
