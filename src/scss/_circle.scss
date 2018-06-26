@@ -1,0 +1,97 @@
+hgroup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  transform: translateY(-50%) translateX(-50%);
+  text-align: center;
+  z-index: 10000;
+  opacity: 0.6;
+  color: black;
+}
+
+.callout {
+  position: relative;
+  width: calc(100% - 60px*2);
+  margin-left: 60px;
+}
+
+.tbc-banner {
+  height: 50vw;
+  min-height: 600px;
+  background: white;
+  cursor: pointer;
+  animation: color-animation 10s infinite linear alternate;
+}
+
+.standard h2 {
+  margin-top: 15px;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.cta {
+  margin-top: 15px;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  color: black;
+  opacity: 0.8;
+}
+
+.label {
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+@keyframes color-animation {
+    0% {
+       background: #f8ddc2;
+    }
+    12% {
+       background: #dfcda3;
+    }
+    24% {
+       background: #cfddbb;
+    }
+    35% {
+       background: #e8eff2;
+    }
+    47% {
+       background: #f6dbfc;
+    }
+    59% {
+       background: #ffdce7;
+    }
+    71% {
+       background: #cfddbb;
+    }
+    83% {
+       background: #cfddbb;
+    }
+    95% {
+       background: #cfddbb;
+    }
+    100% {
+       background: #cfddbb;
+    }
+ }
+
+ #canvas-container {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 1000;
+   mix-blend-mode: overlay;
+   opacity: 1;
+ }
+
+ #colorCanvas {
+   width: 100%;
+   height: 100%;
+ }
