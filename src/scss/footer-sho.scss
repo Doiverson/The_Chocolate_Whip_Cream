@@ -16,8 +16,8 @@ body {
     transform: translateX(-50%) translateY(-50%);
 }
 
-.cursor:nth-child(1){ background-color: #d644cf; z-index: 1000;}
-.cursor:nth-child(2){ background-color: #dbff9a; z-index: 999; }
+.cursor:nth-child(1){ background-color: #d644cf; z-index: 5;}
+.cursor:nth-child(2){ background-color: #dbff9a; z-index: 4;}
 
 footer.global{
     padding: $pad*1.5 $pad $pad*2;
