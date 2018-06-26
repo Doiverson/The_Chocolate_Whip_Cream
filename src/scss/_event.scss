@@ -1,0 +1,82 @@
+.event {
+  a {
+    text-decoration: none;
+    color: #222;
+  }
+  padding: 90px 60px 0;
+  display: flex;
+  .hgroup {
+    width: calc(20vw - 40px);
+    .label {
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      font-size: .8rem;
+      opacity: .9;
+    }
+  }
+  h3 {
+    margin-top: 12px;
+    font-size: 2.25rem;
+    line-height: 1;
+  }
+  .cta {
+    display: inline-block;
+    position: relative;
+    margin-top: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 0.1rem;
+    color: black;
+    opacity: .8;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      margin-top: 10px;
+      height: 1px;
+      background: black;
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      transition: transform 0.5s $ease;
+    }
+    &:hover:after {
+      transition: transform 0.5s $ease;
+      transform: translateX(-50%) scaleX(1);
+    }
+  }
+  .img-wrapper {
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+  a:hover {
+    figure {
+      img {
+        transform: scale(1.03);
+      }
+    }
+  }
+  figure {
+    margin: 0 0 30px 20px;
+    width: calc(40vw - 60px);
+    overflow: hidden;
+    img {
+      display: block;
+      max-width: 100%;
+      transform: scale(1.0);
+      transition:transform 2s $ease,
+    }
+    figcaption {
+      .label {
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-size:.8rem;
+      }
+      h4 {
+        margin: 12px 0;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
