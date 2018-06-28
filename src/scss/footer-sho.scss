@@ -326,9 +326,13 @@ footer.global{
         clear: right;
         width: auto;
         height: $pad/3;
+
+
         opacity: 0.15;
         @include breakpoint(tablet){
             display: none;
         }
+
     }
+
 }

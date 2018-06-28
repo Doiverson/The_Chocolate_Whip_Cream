@@ -7,35 +7,106 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" type="text/css" href="./src/scss/footer-sho.scss">
+
+
+
+  <style type="text/css">
+
+  .main-left li{
+    float: left;
+    position: relative;
+    margin-top: 60px;
+     padding:20px 40px;
+
+   }
+
+
+  .main-right li{
+     float:right;
+     position: relative;
+     margin-top: 60px;
+      padding:20px 40px;
+   }
+
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    z-index: 100;
+    bottom: 90px;
+    transform: translateX(-50%);
+    color: black;
+    font-size: 40px;
+    padding-top:10px;
+}
+
+   header{
+   	position: fixed;
+   	top:0;
+   	left:0;
+   	width:100%;
+   	z-index: 10000;
+    background-color:white;
+}
+
+a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #333;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform .3s;
+}
+a:hover::after {
+  transform: scale(1, 1);
+}
+
+  </style>
+
+
+
 </head>
 <body>
 <script src="./js/circle.js"></script>
 <script src="./dist/main.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <header>
-  <nav>
-    <ul>
+
+  <nav class="global">
+    <ul class="main-left">
       <li>
-        <a href="#">shop</a>
+        <a href="#" class="button">SHOP</a>
       </li>
       <li>
-        <a href="#">subscription</a>
+        <a href="#" class="button">SUBSCRIPTION</a>
       </li>
       <li>
-        <a href="#">wholesale</a>
+        <a href="#" class="button">WHOLESALE</a>
       </li>
-    </ul>
-    <a href="">The Chocolate Whip Cream</a>
-    <ul>
+  </ul>
+    <a class="logo">The Chocolate Whip Cream</a>
+    <ul class="main-right">
       <li>
-        <a href="#">shop</a>
-      </li>
-      <li>
-        <a href="#">subscription</a>
+        <a href="#" class="button">LEARN</a>
       </li>
       <li>
-        <a href="#">wholesale</a>
+        <a href="#" class="button">ACCOUNT</a>
       </li>
+      <li>
+        <a href="#" class="button">LOCATION</a>
+        </li>
+
+
+
     </ul>
   </nav>
 </header>
