@@ -5,6 +5,8 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <title>Document</title>
   <link rel="stylesheet" type="text/css" href="./src/scss/footer-sho.scss">
 
@@ -76,7 +78,10 @@ a:hover::after {
 
 </head>
 <body>
+<div class='cursor'></div>
+<div class='cursor'></div>
 <script src="./js/circle.js"></script>
+<script src="./js/cursor.js"></script>
 <script src="./dist/main.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <header>
@@ -142,7 +147,29 @@ a:hover::after {
 
   </section>
   <section class="product">
-    // mie
+    <div class="product-info">
+      <div class="first-product">
+        <img src="img/cake/cake-4c.png">
+        <div class="product-name">
+          <p>Strawberry Tart</p>
+          <span>$ 5.50</span>
+        </div>
+      </div>
+
+      <div class="second-product">
+        <img src="img/cake/cake-5c.png">
+        <div class="product-name">
+          <p>Chocolate Tart</p>
+          <span>$ 7.25</span>
+        </div>
+      </div>
+      <div class="feature">
+        <span>Special Recommendation</span>
+        <h2>Tart of the Tart</h2>
+        <p>Featuring the freshest in our beautiful range of seasonal tarts <br>sourced throughout the year.</p>
+        <a href="#">SHOP NOW</a>
+      </div>
+    </div>
 
   </section>
   <section class="tbc-banner callout mouse" style="">
@@ -252,15 +279,15 @@ a:hover::after {
         Follow Ceremony
       </li>
       <li>
-        <a href="https://twitter.com/Sho_Vancouver" class="icon icon-twitter"></a>
-        <a href="https://www.facebook.com/shosuke.doi?ref=bookmarks" class="icon icon-facebook"></a>
-        <a href="https://www.instagram.com/doiverson/" class="icon icon-instagram"></a>
+        <a href="https://twitter.com/Sho_Vancouver" class="fa fa-twitter" style="font-size: 2.5rem; margin-right: 15PX"></a>
+        <a href="https://www.facebook.com/shosuke.doi?ref=bookmarks" class="fa fa-facebook" style="font-size: 2.5rem; margin-right: 15PX"></a>
+        <a href="https://www.instagram.com/doiverson/" class="fa fa-instagram" style="font-size: 2.5rem; margin-right: 15PX"></a>
       </li>
     </ul>
   </aside>
   <!--Due to copyright, empty URL-->
-  <a href="" class="logo"><img src="https://ceremonycoffee.com/wp-content/themes/ceremony/assets/images/logo-black.svg" style="display: inline-block;"><span>Coffee Roasters — ©2018</span></a>
-  <img src="https://ceremonycoffee.com/wp-content/themes/ceremony/assets/images/tagline.svg" id="tagline" style="display: block;">
+  <a href="" class="logo"><img src="" style="display: inline-block;"><span>CICCC JP — ©2018</span></a>
+  <img src="" id="tagline" style="display: block;">
 
 
   </footer>
