@@ -1,0 +1,84 @@
+.hero {
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    img {
+      display: block;
+      opacity: 0;
+      transition: opacity .8s $ease;
+    }
+    .hgroup {
+      color: #fff;
+      opacity: .9;
+      visibility: hidden;
+      position: absolute;
+      left: calc(10vw + 50px);
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      width: calc(30vw - 50px);
+      .label {
+        opacity: 0;
+        transition: opacity .5s $ease;
+      }
+      h1 {
+        padding-top: 12px;
+        padding-bottom: 15px;
+        max-width: 300px;
+        line-height: .8;
+        font-size: calc(24px + 36 * ( (100vw - 420px) / 1980));
+        span {
+          opacity: 0;
+          margin-right: .5em;
+          transform: translateY(110%);
+          padding-bottom: .75rem;
+          display: inline-block;
+          @for $i from 1 through 10 {
+            &:nth-child(#{$i}) {
+              transition: transform .5s $ease, opacity .5s $ease;
+            }
+          }
+        }
+      }
+      p {
+        margin-top: 15px;
+        max-width: 300px;
+        transition: opacity .5s $ease;
+        line-height: 1.5;
+        opacity: 0;
+      }
+      .cta {
+        color: #fff;
+        margin-top: 30px;
+        display: inline-block;
+        transition: opacity 1s $ease;
+        opacity: 0;
+      }
+    }
+    &.active {
+      img {
+        opacity: 1;
+      }
+      .hgroup {
+        visibility: visible;
+        .label, p, .cta {
+          opacity: 1;
+          transition: opacity 1s $ease 1s;
+        }
+        h1 span {
+          opacity: 1;
+          transform: translateY(0);
+          @for $i from 1 through 100 {
+            &:nth-child(#{$i}) {
+              transition: transform 1s $ease .2s * $i, opacity 1s $ease .2s * $i;
+            }
+          }
+        }
+      }
+    }
+  }
+}

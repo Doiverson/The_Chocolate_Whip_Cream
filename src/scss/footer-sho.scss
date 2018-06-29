@@ -1,0 +1,358 @@
+@import url("https://use.typekit.net/pon8ywh.css");
+
+
+* {
+    cursor: none;
+}
+
+.cursor{
+    opacity: 0.5;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-100%);
+}
+
+.cursor:nth-child(1){ background-color: #d644cf; z-index: 5;}
+.cursor:nth-child(2){ background-color: #dbff9a; z-index: 4;}
+
+
+footer.global{
+    padding: $pad*1.5 $pad $pad*2;
+    float: left;
+    clear: both;
+    width: 100%;
+    background: white;
+    #newsletter{
+        width: 100%;
+        height: $pad*1.25;
+        background: #4b4b4a;
+        margin:0 0 $pad*2;
+        overflow: hidden;
+        padding: 0 $pad/2;
+        position: relative;
+        font-size: 0.9rem;
+        div{
+            height: $pad*1.25;
+            width: 100%;
+            color: white;
+            top:100%;
+            left:0;
+            overflow: hidden;
+            position: absolute;
+            transition: $slow $ease;
+        }
+        span.response{
+            display: none;
+            position: absolute;
+            left:$pad/2;
+            top:50%;
+            color: #b6b6b6;
+            transform: translateY(-50%);
+        }
+        #newsletter-cover{
+            p{
+                position: absolute;
+                left:$pad/2;
+                top:50%;
+                color: #b6b6b6;
+                transform: translateY(-50%);
+                span{
+                    color: white;
+                }
+            }
+        }
+        #newsletter-form{
+            background: black;
+            input[type=email]{
+                position: absolute;
+                top:0;
+                left:0;
+                border: none;
+                padding: 0 $pad/2;
+                width: 100%;
+                background: transparent;
+                line-height: $pad*1.25;
+                font-family: $sans;
+                font-size: 100%;
+                color: white;
+                background: none;
+                border:none;
+                font-size: 0.9rem;
+                border-radius: 0;
+                @include placeholder{
+                    color: white;
+                }
+            }
+            input[type=submit]{
+                position: absolute;
+                right:$pad/2;
+                top:50%;
+                transform: translateY(-50%);
+                background: black;
+                line-height: $pad*1.25;
+                color: white;
+                font-size: 0.9rem;
+                border:none;
+                cursor: pointer;
+                z-index: 1000;
+                margin: 0;
+                padding: 0;
+                &:disabled{
+                    opacity: 0.5;
+                    cursor: not-allowed;
+                }
+            }
+        }
+        #newsletter-join-btn{
+            position: absolute;
+            right:$pad/2;
+            top:33%;
+            cursor: pointer;
+            transform: translateY(-50%);
+            color: white;
+        }
+        &.default{
+            cursor: pointer;
+            #newsletter-cover{
+                top:0;
+            }
+        }
+        &.form{
+            #newsletter-cover{
+                top:-100%;
+            }
+            #newsletter-form{
+                top:0;
+            }
+        }
+        &.response{
+            cursor: n-resize;
+            #newsletter-cover{
+                top:-100%;
+            }
+            #newsletter-form{
+                top:-100%;
+            }
+            #newsletter-response{
+                top:0!important;
+            }
+            &.success{
+                span.response.success{
+                    display: block;
+                }
+            }
+            &.error{
+                span.response.error{
+                    display: block;
+                }
+            }
+        }
+        @include breakpoint(tablet){
+            text-align: center;
+            height: auto;
+            background:none;
+            div{
+                position: relative;
+                top:0;
+                height:  auto;
+            }
+            #newsletter-join-btn{
+                display: none;
+            }
+            #newsletter-cover{
+
+                p{
+                    padding:$pad/3;
+                    position: relative;
+                    text-align: center;
+                    transform: none;
+                    top:auto;
+                    left:auto;
+                    color: black;
+                    span{
+                        color: black;
+                    }
+                }
+            }
+            #newsletter-form{
+                background: none;
+                input[type=email],
+                input[type=submit]{
+                    line-height: $pad;
+                    position: relative;
+                }
+                input[type=email]{
+                    text-align: center;
+                    background: black;
+                }
+                input[type=submit]{
+                    right: auto;
+                    top:auto;
+                    display: inline-block;
+                    background: none;
+                    margin-top: $pad/3;
+                    color:black;
+                }
+            }
+            &.default{
+                cursor: pointer;
+                #newsletter-cover{
+                    top:0;
+                }
+                #newsletter-form{
+                    top:0;
+                }
+            }
+            &.form{
+                #newsletter-cover{
+                    top:0;
+                }
+                #newsletter-form{
+                    top:0;
+                }
+            }
+        }
+    }
+    nav.global{
+        width: 61%;
+        float: left;
+        padding-bottom: $pad*2;
+        ul.main{
+            li{
+                float: left;
+                width: calc(25% - #{$pad});
+                margin-right: $pad;
+                a{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 0.9rem;
+                    text-transform: uppercase;
+                    margin-bottom: $pad/3;
+                    display: inline-block;
+                    &:hover{
+                        color: #888888;
+                    }
+                }
+                ul{
+                    width: 100%;
+                    li{
+                        margin-right: 0;
+                        width: 100%;
+                        a{
+                            color: #888888;
+                            text-transform: none;
+                            &:hover{
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @include breakpoint(tablet){
+            display: none;
+        }
+    }
+    aside{
+        float: right;
+        width: 15%;
+        ul{
+            li{
+                margin-bottom: $pad/2;
+                font-size: 1.2rem;
+                line-height: 1.5;
+                span{
+                    text-transform: uppercase;
+                    font-size: 0.9rem;
+                    display: inline-block;
+                    letter-spacing: 1px;
+                    color: #888888;
+                }
+                a{
+                    text-decoration: none;
+                    color: black;
+                    transition: color $slow $ease;
+                    &:hover{
+                        color: #888888;
+                    }
+                    & .fa{
+                        font-size: 3.5rem;
+                        margin-right: 15px;
+                    }
+                }
+
+            }
+        }
+        @include breakpoint(tablet){
+            width: 100%;
+            float: left;
+            clear: both;
+            text-align: center;
+            ul{
+                li{
+                    &#gift-card-btn{
+                        display: none;
+                    }
+                    a{
+                        .fa{
+                            font-size: 2.5rem;
+                            margin: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .logo{
+        float: left;
+        clear: both;
+        position: relative;
+        text-decoration: none;
+        color: black;
+        @extend %clearfix;
+        img{
+            height: $pad/3;
+            width: auto;
+        }
+        span{
+            margin-top: 0.5rem;
+            display: inline-block;
+            position: absolute;
+            top:100%;
+            left:0;
+            width: 100%;
+            text-align: left;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.66rem;
+        }
+        @include breakpoint(tablet){
+            text-align: center;
+            width: 100%;
+            margin-top: $pad*2;
+            img{
+                height: $pad/4;
+                width: auto;
+            }
+            span{
+                text-align: center;
+            }
+        }
+    }
+    #tagline{
+        float: right;
+        clear: right;
+        width: auto;
+        height: $pad/3;
+
+
+        opacity: 0.15;
+        @include breakpoint(tablet){
+            display: none;
+        }
+
+    }
+
+}
