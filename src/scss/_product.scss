@@ -1,6 +1,6 @@
 
 	.product {
-		font-family: "Avenir";
+		font-family: $sans;
 		background-color: #FCFBF9;
 		width: 100%;
 		padding: 90px 60px 0 60px;
@@ -101,7 +101,7 @@
 				}
 
 				h2 {
-					font-family: "Meta Serif", serif;
+					font-family: $serif;
 					margin-top: 15px;
 					margin-bottom: 0;
 					font-size: 2.3rem;
