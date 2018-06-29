@@ -11,7 +11,7 @@ window.requestAnimFrame = (function(){
             };
 })();
 
-window.onload = function() {
+function circle() {
 
     //　Canvas未サポートは実行しない
     if(!window.HTMLCanvasElement) return;
